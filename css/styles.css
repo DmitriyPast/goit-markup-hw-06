@@ -885,11 +885,11 @@ section.portfolio {
     width: 18px;
     height: 4px;
   }
-}
 
-.menu-icon::before,
-.menu-icon::after {
-  content: "";
+  .menu-icon::before,
+  .menu-icon::after {
+    content: "";
+  }
 }
 
 @media (min-width: 320px) {
