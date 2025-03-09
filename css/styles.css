@@ -171,12 +171,13 @@ margin-right: auto;
 .hero {
   padding: 188px 0;
   max-width: 1440px;
-
+  min-width: 320px;
   /* fixes from url(https://www.loom.com/share/5b7fa2eb5bf3419b81f4e202121334e5?sid%3D4f42aa63-a6f2-4307-8cce-452f32efc100) */
   margin: 0 auto;
 }
 
 .hero-bg {
+  /* max-width: 1440px; */
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -185,8 +186,9 @@ margin-right: auto;
   /* background-image: url("../images/Dark-bg.png"),
     url("../images/people-office\ 1.png"); */
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
+  overflow: hidden;
 }
 
 .ws-bottom-bg {
@@ -219,7 +221,6 @@ section.portfolio {
 }
 
 .visually-hidden {
-  /* visibility: hidden; */
   position: absolute;
   width: 1px;
   height: 1px;
@@ -235,11 +236,13 @@ section.portfolio {
 .feature-list,
 .team-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
 }
 
 .feature-item {
   width: calc((100% - 72px) / 4);
+  width: 264px;
   /* width: calc((100% - 3 * 24px) / 4); */
   /* flex-basis: calc((100% - 3 * 24px) / 4); */
   /* flex-basis: calc((100% - 72px) / 4); */
@@ -543,13 +546,13 @@ section.portfolio {
   /* font-family: "Roboto", sans-serif; */
   /* font-weight: 400; */
   font-size: 12px;
-  line-height: 2;/* line-height: 24px; */
+  line-height: 2; /* line-height: 24px; */
   /* letter-spacing: 0.04em; */
   color: #fff;
 }
 
 .form-input.sub-form-input::placeholder {
-  color: #fff
+  color: #fff;
 }
 
 .subscr-btn {
@@ -739,13 +742,13 @@ section.portfolio {
 }
 
 /* .fmi-cb { */
-  /* display: flex; */
-  /* align-items: center; */
-  /* gap: 8px; */
+/* display: flex; */
+/* align-items: center; */
+/* gap: 8px; */
 /* } */
 
 /* .cb-accept { */
-  /* appearance: none; */
+/* appearance: none; */
 /* } */
 
 .custom-cb {
@@ -839,6 +842,120 @@ section.portfolio {
 
 .fi-mr {
   margin-right: 8px;
+}
+
+/* #endregion */
+
+/* #region media */
+
+@media (min-width: 0px) {
+  /*<- Це перенести в базовий CSS?*/
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .box-menu {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .burger-btn {
+    width: 24px;
+    height: 24px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .menu-icon {
+  }
+
+  .menu-icon,
+  .menu-icon::before,
+  .menu-icon::after {
+    background-color: #2f2f37;
+    height: 2px;
+    width: 18px;
+    height: 4px;
+  }
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+}
+
+@media (min-width: 320px) {
+  /*<- Чи це в медіа запиті залишити?*/
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .feature-item {
+    /* width: calc((100% - 72px) / 4); */
+    width: 264px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .feature-item {
+    /* width: calc((100% - 72px) / 4); */
+    width: 264px;
+  }
+}
+
+@media (min-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1158px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .feature-item {
+    width: calc((100% - 24px) / 2);
+    /* width: 264px; */
+  }
+}
+
+@media (min-width: 1158px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .feature-item {
+    width: calc((100% - 72px) / 4);
+    /* width: 264px; */
+  }
+}
+
+@media (min-resolution: 2x) {
+  .hero-bg {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/background2x.jpg);
+  }
 }
 
 /* #endregion */
