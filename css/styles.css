@@ -186,7 +186,7 @@ margin-right: auto;
   /* background-image: url("../images/Dark-bg.png"),
     url("../images/people-office\ 1.png"); */
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   overflow: hidden;
 }
