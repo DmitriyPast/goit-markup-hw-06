@@ -855,13 +855,31 @@ section.portfolio {
     overflow-x: hidden;
   }
 
+  .site-hdr > .container {
+    padding: 16px;
+  }
+
+  .site-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .box-menu {
-    width: 500px;
-    margin: 0 auto;
+    /* width: 500px; */
+    /* margin: 0 auto; */
   }
 
   .menu-toggle {
-    display: none;
+    /* display: none; */
+  }
+
+  .menu-toggle:checked + .burger-btn > .menu-icon {
+    background-color: transparent;
+  }
+
+  .menu-toggle:checked + .burger-btn > .menu-icon::before,
+  .menu-toggle:checked + .burger-btn > .menu-icon::after {
+    top: 0;
   }
 
   .burger-btn {
@@ -875,6 +893,7 @@ section.portfolio {
   }
 
   .menu-icon {
+    position: relative;
   }
 
   .menu-icon,
@@ -882,13 +901,28 @@ section.portfolio {
   .menu-icon::after {
     background-color: #2f2f37;
     height: 2px;
-    width: 18px;
-    height: 4px;
+    width: 17px;
+    height: 3px;
+    border-radius: 2px;
   }
 
   .menu-icon::before,
   .menu-icon::after {
+    position: absolute;
     content: "";
+  }
+
+  .menu-icon::before {
+    top: -6px;
+  }
+
+  .menu-icon::after {
+    top: 6px;
+  }
+
+  .nav-menu,
+  .contacts {
+    display: none;
   }
 }
 
