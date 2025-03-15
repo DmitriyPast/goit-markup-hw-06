@@ -71,7 +71,7 @@ button {
 
 .container {
   /* max-width: 1158px; */
-  padding: 0 15px;
+  padding: 0 16px;
   margin: 0 auto;
 
   /* fixes from url(https://www.loom.com/share/5b7fa2eb5bf3419b81f4e202121334e5?sid%3D4f42aa63-a6f2-4307-8cce-452f32efc100) */
@@ -89,7 +89,7 @@ button {
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
-    padding: 0 15px;
+    padding: 0 16px;
   }
 }
 /* #endregion */
