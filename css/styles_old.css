@@ -274,10 +274,3 @@
 }
 
 /* #endregion */
-
-/* #region media */
-
-@media (min-width: 0px) {
-  /*<- Це перенести в базовий CSS?*/
-}
-/* #endregion */
